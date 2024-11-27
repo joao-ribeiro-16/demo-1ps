@@ -1,0 +1,24 @@
+<!-- <div class="stepper">
+  <div class="stepper-header">
+    <span>Gewünschte Rate</span>
+    <span>1/4</span>
+  </div>
+  <div class="stepper-content">
+    <h2>Ihre Online-Finanzierung</h2>
+    <p>Finanzierungsbetrag: <strong>500,00 €</strong></p>
+    <p>Ihr Kauf bei: <strong>Testhändler</strong></p>
+  </div>
+</div> -->
+
+<div class="stepper-container">
+  <!-- Title and Steps Indicator -->
+  <div class="stepper-header">
+    <span class="stepper-title">Gewünschte Rate</span>
+    <span class="stepper-count">{{ currentStep }}/{{ steps }}</span>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar">
+    <div class="progress" [style.width]="getProgressWidth()"></div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+/* BNPPSans Light */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-light.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-light.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-light.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-light.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-light.svg#BNPPSans") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPSans Light Italic */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-light-italic.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-light-italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-light-italic.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-light-italic.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-light-italic.svg#BNPPSans") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+/* BNPPSans Regular */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans.eot?#iefix") format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans.svg#BNPPSans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPSans Italic */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-italic.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-italic.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-italic.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-italic.svg#BNPPSans") format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+/* BNPPSans Bold */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-bold.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-bold.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-bold.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-bold.svg#BNPPSans") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPSans Bold Italic */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-bold-italic.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-bold-italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-bold-italic.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-bold-italic.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-bold-italic.svg#BNPPSans") format("svg");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+/* BNPPSans Extra Bold */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-extrabold.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-extrabold.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-extrabold.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-extrabold.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-extrabold.svg#BNPPSans") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPSans Extra Bold Italic */
+@font-face {
+  font-family: "BNPPSans";
+  src: url("fonts/bnpp-sans/bnpp-sans-extrabold-italic.eot");
+  src: url("fonts/bnpp-sans/bnpp-sans-extrabold-italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans/bnpp-sans-extrabold-italic.woff") format("woff"),
+    url("fonts/bnpp-sans/bnpp-sans-extrabold-italic.ttf") format("truetype"),
+    url("fonts/bnpp-sans/bnpp-sans-extrabold-italic.svg#BNPPSans") format("svg");
+  font-weight: 800;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+/* BNPPType Regular */
+@font-face {
+  font-family: "BNPPType";
+  src: url("fonts/bnpp-type/bnpp-type-regular-v2.eot");
+  src: url("fonts/bnpp-type/bnpp-type-regular-v2.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-type/bnpp-type-regular-v2.woff") format("woff"),
+    url("fonts/bnpp-type/bnpp-type-regular-v2.ttf") format("truetype"),
+    url("fonts/bnpp-type/bnpp-type-regular-v2.svg#BNPPType") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPType Bold */
+@font-face {
+  font-family: "BNPPType";
+  src: url("fonts/bnpp-type/bnpp-type-bold-v2.eot");
+  src: url("fonts/bnpp-type/bnpp-type-bold-v2.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-type/bnpp-type-bold-v2.woff") format("woff"),
+    url("fonts/bnpp-type/bnpp-type-bold-v2.ttf") format("truetype"),
+    url("fonts/bnpp-type/bnpp-type-bold-v2.svg#BNPPType") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPSansCondensed Light */
+@font-face {
+  font-family: "BNPPSansCondensed";
+  src: url("fonts/bnpp-sans-condensed/bnpp-sans-cond-light-v2.eot");
+  src: url("fonts/bnpp-sans-condensed/bnpp-sans-cond-light-v2.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans-condensed/bnpp-sans-cond-light-v2.woff") format("woff"),
+    url("fonts/bnpp-sans-condensed/bnpp-sans-cond-light-v2.ttf")
+      format("truetype"),
+    url("fonts/bnpp-sans-condensed/bnpp-sans-cond-light-v2.svg#BNPPSansCondensed")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* BNPPSansCondensed Regular */
+@font-face {
+  font-family: "BNPPSansCondensed";
+  src: url("fonts/bnpp-sans-condensed/bnpp-sans-cond-v2.eot");
+  src: url("fonts/bnpp-sans-condensed/bnpp-sans-cond-v2.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/bnpp-sans-condensed/bnpp-sans-cond-v2.woff") format("woff"),
+    url("fonts/bnpp-sans-condensed/bnpp-sans-cond-v2.ttf") format("truetype");
+}

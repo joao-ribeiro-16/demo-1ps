@@ -1,0 +1,449 @@
+.container {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #333;
+}
+
+.tabs {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  gap: 6px;
+
+  background: #f0f0f0;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+
+  height: 36px;
+
+  border-radius: 2px;
+}
+
+.tab.active {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px 0px 4px;
+  gap: 4px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+}
+
+.title-rate-selection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0px;
+}
+
+.title-rate-selection > h3 {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2d2926;
+}
+
+.rate-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 57%;
+  height: 44px;
+  padding: 0;
+  background: #00965e;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.arrow-btn:hover {
+  background: #007548; /* Darker green on hover */
+}
+
+.rate-btn {
+  width: 100%;
+  height: 44px;
+  padding: 8px 4px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.rate-btn.active {
+  border-color: #007548;
+  font-weight: bold;
+}
+
+/* Rate Options */
+.rate-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.rate-btn:hover {
+  background: #f0f0f0;
+}
+
+.option-btn {
+  flex: 1 1 calc(50% - 8px);
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid #007548;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #007548;
+}
+
+.option-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.option-btn:focus {
+  outline: 2px solid #007548;
+}
+
+.financing-plan {
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 16px;
+}
+
+.financing-plan h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d2926;
+  margin-bottom: 12px;
+}
+
+.plan-details {
+  margin-bottom: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #2d2926;
+}
+
+.detail-row strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rate-deduction {
+  margin-top: 16px;
+}
+
+.rate-deduction span {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+  color: #2d2926;
+}
+
+.custom-switch {
+  width: 38px;
+  height: 22px;
+  border-radius: 15px;
+  background-color: #008000;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.custom-switch:checked {
+  background-color: #008000;
+}
+
+.custom-switch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.1s ease;
+  transform: translateX(0);
+}
+
+.custom-switch:checked::before {
+  transform: translateX(16px);
+}
+
+.toggle-label {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.rateneinzug {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.switch-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  /* background-color: #ddd; */
+  border: 1px solid #d6d6d6;
+  margin: 16px 0;
+}
+
+.finance-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.finance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 16px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  background-color: #00965e;
+  border-radius: 50%;
+  flex-shrink: 0;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.text-content h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.text-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.text-content h3 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.p-finance-item {
+  margin-top: 1px;
+}
+
+/*Online Credit Container Information*/
+.online-credit-title {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+  color: #2d2926;
+}
+
+.online-credit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+}
+
+.step-circle {
+  width: 48px;
+  height: 48px;
+}
+
+/* .step-content p {
+  font-family: "BNPP Sans";
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+} */
+
+/* .step-content {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: #2d2926;
+} */
+
+.card-info p {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  font-family: "BNPP Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.card-image {
+  margin-top: 10px;
+  justify-self: center;
+}
+
+/* .faq-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  height: 48px;
+
+  margin: 10px 0;
+  color: #007548;
+  cursor: pointer;
+  font-family: "BNPP Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+} */
+
+.faq-section {
+  margin: 10px 0;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  margin: 10px 0;
+  color: #007548;
+  cursor: pointer;
+  font-family: "BNPP Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.faq-item img {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.faq-content {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.button-container {
+  width: 100%;
+  text-align: center;
+}
+
+.cta-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  width: 100%;
+  color: white;
+  background: #007548;
+  border-radius: 2px;
+}
+
+.cta-button:hover {
+  background-color: darkgreen;
+}

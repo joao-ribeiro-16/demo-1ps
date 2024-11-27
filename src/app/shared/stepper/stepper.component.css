@@ -1,0 +1,39 @@
+.stepper-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 16px;
+}
+
+.stepper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.stepper-title {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.stepper-count {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007b55;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+  border-radius: 0%;
+}

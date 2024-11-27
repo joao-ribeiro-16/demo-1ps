@@ -1,0 +1,77 @@
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: Arial, sans-serif;
+  padding: 16px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  color: #007548;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 500;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  min-height: 48px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align text and blocks to the right */
+}
+
+.phone-info {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align text to the right */
+  gap: 10px;
+  text-align: right;
+}
+
+.phone-info .phone-number {
+  text-align: right;
+  color: #007548;
+}
+
+.phone-info p {
+  text-align: right; /* Right-align additional text */
+}
+
+.phone-icon {
+  margin-right: 10px;
+}
+
+.text-number {
+  font-size: 14px;
+}
+
+.seal {
+  display: flex;
+  justify-content: center; /* Center the seal */
+  width: 100%; /* Ensure it spans the container */
+}
+
+.seal img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  border: 2px solid #007548;
+  margin: 16px 0;
+}

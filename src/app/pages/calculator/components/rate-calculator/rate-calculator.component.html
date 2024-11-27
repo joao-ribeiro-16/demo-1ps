@@ -1,0 +1,259 @@
+<div class="container">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button
+      class="tab"
+      [class.active]="activeTab === 'Laufzeit'"
+      (click)="setActiveTab('Laufzeit')"
+    >
+      Laufzeit
+    </button>
+    <button
+      class="tab"
+      [class.active]="activeTab === 'Wunschraten'"
+      (click)="setActiveTab('Wunschraten')"
+    >
+      Wunschraten
+    </button>
+  </div>
+
+  <!-- Anzahl an Raten -->
+  <div class="rate-selection">
+    <div class="title-rate-selection">
+      <h3>Anzahl an Raten</h3>
+    </div>
+    <div class="rate-buttons">
+      <button class="arrow-btn">
+        <img src="assets/arrow-button.png" alt="arrow-button" />
+      </button>
+      <button class="rate-btn">28</button>
+      <button class="rate-btn active">30</button>
+      <button class="rate-btn">32</button>
+      <button class="arrow-btn" style="transform: rotate(180deg)">
+        <img src="assets/arrow-button.png" alt="arrow-button" />
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div *ngIf="activeTab === 'Laufzeit'" class="rate-options">
+      <button class="option-btn">Kürzeste Laufzeit</button>
+      <button class="option-btn">0 % mit langer Laufzeit</button>
+      <button class="option-btn">Günstigster Zins</button>
+      <button class="option-btn">Kleinste Rate</button>
+    </div>
+
+    <div *ngIf="activeTab === 'Wunschraten'" class="rate-options">
+      <button class="option-btn">Kürzeste Laufzeit</button>
+      <button class="option-btn">0 % mit langer Laufzeit</button>
+      <button class="option-btn">Günstigster Zins</button>
+      <!-- <button class="option-btn">Kleinste Rate</button> -->
+    </div>
+  </div>
+</div>
+
+<!-- Financing Plan Details -->
+<div class="financing-plan">
+  <h4>Möglicher Finanzierungsplan bei dieser Mindestrate</h4>
+  <div class="plan-details">
+    <div class="detail-row">
+      <span>Monatliche Wunschraten:</span>
+      <p>
+        <strong>18,16 €</strong>
+      </p>
+    </div>
+    <div class="detail-row">
+      <span
+        >Sollzinssatz für diesen Einkauf<br />für 30 Monate (jährl.,
+        gebunden):</span
+      >
+      <strong>6,75 %</strong>
+    </div>
+    <div class="detail-row">
+      <span>Mögliche Sollzinsen für diesen Einkauf:</span>
+      <strong>44,80 €</strong>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="rateneinzug">Rateneinzug</h3>
+    <div class="custom-toggle d-flex align-items-center switch-div">
+      <label
+        class="toggle-label"
+        [class.text-success]="!isFirstSelected"
+        [class.text-secondary]="isFirstSelected"
+      >
+        Zum 1. des Monats
+      </label>
+      <div class="form-check form-switch mx-3">
+        <input
+          class="form-check-input custom-switch"
+          type="checkbox"
+          id="rateToggle"
+          [(ngModel)]="isFirstSelected"
+        />
+      </div>
+      <label
+        class="toggle-label"
+        [class.text-success]="isFirstSelected"
+        [class.text-secondary]="!isFirstSelected"
+      >
+        Zum 15. des Monats
+      </label>
+    </div>
+  </div>
+</div>
+<div class="separator"></div>
+
+<!-- Top Section -->
+<!-- <div class="finance-container"> -->
+<div class="finance-item">
+  <div class="circle"><p class="p-finance-item">1</p></div>
+  <div class="text-content">
+    <p>
+      Finanzierung Ihres Einkaufs (Ratenplan-Verfügung) über den Kreditrahmen,
+      den Sie wiederholt in Anspruch nehmen können. Nettodarlehensbetrag
+      bonitätsabhängig bis 15.000 €, 18,90 % effektiver Jahreszinssatz.
+      Vertragslaufzeit auf unbestimmte Zeit.
+    </p>
+    <h3>Ratenplan-Verfügung:</h3>
+    <p>
+      Gebundener Sollzinssatz von 6,75 % (jährlich) gilt nur für die ersten 30
+      Monate ab Vertragsschluss (Zinsbindungsdauer). Sie müssen monatliche
+      Teilzahlungen in der von Ihnen gewählten Höhe leisten. Führen Sie Ihre
+      Ratenplan-Verfügung nicht innerhalb der Zinsbindungsdauer zurück, gelten
+      die Konditionen für Folgeverfügungen.
+    </p>
+    <h3>Folgeverfügungen:</h3>
+    <p>
+      Für andere und künftige Verfügungen (Folgeverfügungen) beträgt der
+      veränderliche Sollzinssatz (jährlich) 17,44 % (falls Sie bereits einen
+      Kreditrahmen bei uns haben, kann der tatsächliche veränderliche
+      Sollzinssatz abweichen). Für Folgeverfügungen müssen Sie monatliche
+      Teilzahlungen in der von Ihnen gewählten Höhe, mind. aber 3,0% des jeweils
+      höchsten, auf volle 100 € gerundeten Sollsaldos der Folgeverfügungen
+      (mind. 9 €) leisten. Zahlungen für Folgeverfügungen werden erst auf
+      verzinste Folgeverfügungen angerechnet, bei unterschiedlichen Zinssätzen
+      zuerst auf die höher verzinsten. Angaben zugleich repräsentatives Beispiel
+      gem. § 17 PangV. Die Kreditvermittlung des Finanzierungspartners erfolgt
+      ausschließlich für den Kreditgeber BNP Paribas S.A. Niederlassung
+      Deutschland, Rüdesheimer Straße 1, 80686 München.
+    </p>
+  </div>
+</div>
+<!-- </div> -->
+
+<!--Online Credit Container Information-->
+<div class="container">
+  <div class="online-credit-container">
+    <h3 class="online-credit-title">So funktioniert Ihr Online-Kredit:</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-circle">
+          <img src="assets/schritt1.png" alt="schritt1" />
+        </div>
+        <div class="step-content">
+          <p>
+            <strong>Schritt 1:</strong>
+            Einrichtung eines individuellen Verfügungsrahmens zu Ihrer
+            Finanzierung
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <img src="assets/schritt2.png" alt="schritt2" />
+        </div>
+        <div class="step-content">
+          <p>
+            <strong>Schritt 2:</strong>
+            Einbuchung der Finanzierung auf dem Verfügungsrahmen
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <img src="assets/schritt3.png" alt="schritt3" />
+        </div>
+        <div class="step-content">
+          <p>
+            <strong>Schritt 3:</strong>
+            Einsatz Ihrer kostenlosen Mastercard® für weitere Einkäufe
+          </p>
+        </div>
+      </div>
+      <div class="separator"></div>
+    </div>
+
+    <div class="card-info">
+      <p>
+        Zu Ihrer Finanzierung erhalten Sie die Consors Finanz Mastercard® –
+        dauerhaft ohne Jahresgebühr. Die Mastercard® erhalten Sie nach Lieferung
+        Ihrer Ware in einem separaten Brief.
+      </p>
+      <div class="card-image">
+        <img src="assets/card-image.png" alt="Card Example" />
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <!-- First FAQ Item -->
+      <div class="faq-item" (click)="toggleText('section1')">
+        <span [ngClass]="openSections['section1'] ? 'text-open' : 'text-closed'"
+          >Warum erhalte ich diese Karte?
+          <img
+            [src]="
+              openSections['section1']
+                ? 'assets/arrow-up.png'
+                : 'assets/arrow-down.png'
+            "
+            alt="arrow"
+            class="arrow"
+        /></span>
+      </div>
+      <div class="faq-content" *ngIf="openSections['section1']">
+        <p>
+          Sie erhalten die Consors Finanz Mastercard®, weil sie der Schlüssel zu
+          Ihrem Verfügungsrahmen ist. Die Karte ist auf jeden Fall immer mit
+          dabei.
+        </p>
+        <p>
+          <strong>Gut zu wissen:</strong> Sollte die Karte nicht verwendet
+          werden, entstehen garantiert keine weiteren Kosten.
+        </p>
+      </div>
+
+      <!-- Second FAQ Item -->
+      <div class="faq-item" (click)="toggleText('section2')">
+        <span [ngClass]="openSections['section2'] ? 'text-open' : 'text-closed'"
+          >Ich habe bereits eine Karte
+          <img
+            [src]="
+              openSections['section2']
+                ? 'assets/arrow-up.png'
+                : 'assets/arrow-down.png'
+            "
+            alt="arrow"
+            class="arrow"
+          />
+        </span>
+      </div>
+      <div class="faq-content" *ngIf="openSections['section2']">
+        <p>
+          Haben Sie bereits die Consors Finanz Mastercard®? Schön, dass Sie
+          schon Kunde bei uns sind! Geben Sie einfach Ihre gewohnten
+          persönlichen Angaben auf der Folgeseite ein.
+        </p>
+        <p>
+          Unser System wird Sie erkennen. Wir wünschen Ihnen viel Freude bei
+          Ihrem Einkauf!
+        </p>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="cta-button">Weiter zur Dateneingabe</button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

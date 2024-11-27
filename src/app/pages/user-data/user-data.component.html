@@ -1,0 +1,93 @@
+<div class="container">
+  <form [formGroup]="userForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Name</label>
+      <input
+        id="firstName"
+        formControlName="firstName"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Last Name</label>
+      <input
+        id="lastName"
+        formControlName="lastName"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Salutation</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="salutation"
+              id="salutation"
+              formControlName="salutation"
+              value="MAN"
+            />
+            <label class="form-check-label" for="man"> Man </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="salutation"
+              id="salutation"
+              formControlName="salutation"
+              value="WOMAN"
+            />
+            <label class="form-check-label" for="woman"> Woman </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Street</label>
+      <input
+        id="street"
+        formControlName="street"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Birth Date</label>
+      <input
+        id="birthDate"
+        formControlName="birthDate"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Telephone</label>
+      <input
+        id="telephone"
+        formControlName="telephone"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <!-- <div class="form-group">
+      <label for="exampleInputEmail1">vendorId</label>
+      <input
+        id="vendorId"
+        formControlName="vendorId"
+        type="text"
+        class="form-control"
+      />
+    </div> -->
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
