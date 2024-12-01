@@ -1,31 +1,6 @@
 <app-header></app-header>
 <div [ngClass]="{ blurred: isBlurred }">
   <app-stepper></app-stepper>
-  <div class="stepper-info">
-    <h1 class="title-ihre-online-finanzierung">
-      Ihre Online-Finanzierung
-      <button
-        type="button"
-        class="btn btn-success rounded-circle stepper-tooltip ms-2"
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="Ihre Online-Finanzierung"
-        aria-label="Tooltip"
-      >
-        1
-      </button>
-    </h1>
-    <div class="summary-info">
-      <div class="summary-info-item">
-        <p class="label">Finanzierungsbetrag:</p>
-        <p class="value"><strong>500,00 €</strong></p>
-      </div>
-      <div class="summary-info-item">
-        <p class="label">Ihr Kauf bei:</p>
-        <p class="value"><strong>Testhändler</strong></p>
-      </div>
-    </div>
-    <div class="separator"></div>
-  </div>
   <app-rate-calculator></app-rate-calculator>
 </div>
+<app-footer></app-footer>

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FinancialModalComponent } from './components/financial-modal/financial-modal.component';
 import { SharedService } from '../../services/shared.service';
-import { CancelModalComponent } from '../../pages/calculator/components/cancel-modal/cancel-modal.component';
+import { HeaderDropdownComponent } from './components/header-dropdown/header-dropdown.component';
+import { CancelModalComponent } from '../../pages/calculator/components/rate-calculator/components/cancel-modal/cancel-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,7 @@ import { CancelModalComponent } from '../../pages/calculator/components/cancel-m
     CommonModule,
     FormsModule,
     CancelModalComponent,
-    FinancialModalComponent,
+    HeaderDropdownComponent,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',

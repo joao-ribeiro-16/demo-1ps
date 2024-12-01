@@ -30,13 +30,13 @@
 .contact-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Align text and blocks to the right */
+  align-items: flex-end;
 }
 
 .phone-info {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-end; /* Align text to the right */
+  flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
   text-align: right;
 }
@@ -47,7 +47,7 @@
 }
 
 .phone-info p {
-  text-align: right; /* Right-align additional text */
+  text-align: right;
 }
 
 .phone-icon {
@@ -60,8 +60,8 @@
 
 .seal {
   display: flex;
-  justify-content: center; /* Center the seal */
-  width: 100%; /* Ensure it spans the container */
+  justify-content: center;
+  width: 100%;
 }
 
 .seal img {

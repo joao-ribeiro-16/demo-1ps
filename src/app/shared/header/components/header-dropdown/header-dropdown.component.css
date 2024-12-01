@@ -1,0 +1,105 @@
+.details-wrapper {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background-color: white;
+  padding: 16px;
+}
+
+.details-wrapper.active {
+  display: block;
+}
+
+.details {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d6d6d6;
+  margin: 16px 0;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.details-label {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #2d2926;
+}
+
+.details-value {
+  color: #333;
+  text-align: right;
+}
+
+.details-value-ihr-kauf {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+
+  color: #2d2926;
+}
+
+.title {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #2d2926;
+}
+
+.title-finanz {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2d2926;
+}
+
+.summary-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  height: 44px;
+}
+
+.details-value-finanz {
+  font-family: "BNPP Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+
+  color: #2d2926;
+}
+
+.summary-set {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 16px;
+  height: 312px;
+}

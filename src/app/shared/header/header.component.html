@@ -10,7 +10,9 @@
   </div>
   <div class="logo-summary">
     <img src="assets/logo-bnp.svg" alt="Consors Finanz" class="logo" />
-    <span class="rate"
+    <span
+      class="rate"
+      [style.textDecoration]="isDetailsVisible ? 'underline' : 'none'"
       >18,16 €/mtl.
       <span (click)="toggleDetails()">
         <img
@@ -27,35 +29,4 @@
 </div>
 <div [ngClass]="isDetailsVisible ? 'overlay' : ''"></div>
 
-<div class="details-wrapper" [class.active]="isDetailsVisible">
-  <div class="details">
-    <p><strong>Ihr Kauf bei</strong> Testhändler</p>
-    <div class="divider"></div>
-    <table>
-      <tr>
-        <th>Finanzierungsbetrag:</th>
-        <td>2.899,90 €</td>
-      </tr>
-      <tr>
-        <th>Monatliche Wunschrate:</th>
-        <td>18,16 €</td>
-      </tr>
-      <tr>
-        <th>Mögliche Anzahl der Monatsraten:</th>
-        <td>26 Monate</td>
-      </tr>
-      <tr>
-        <th>Sollzinssatz für diesen Einkauf:</th>
-        <td>6,75 % (jährl., gebunden)</td>
-      </tr>
-      <tr>
-        <th>Mögliche Sollzinsen für diesen Einkauf:</th>
-        <td>39,98 €</td>
-      </tr>
-      <tr>
-        <th>Rateneinzug:</th>
-        <td>Zum 1. des Monats</td>
-      </tr>
-    </table>
-  </div>
-</div>
+<app-header-dropdown [detailsVisible]="isDetailsVisible"></app-header-dropdown>

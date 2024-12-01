@@ -1,0 +1,107 @@
+.credit-process {
+  text-align: left;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start; /* Align items to the top for proper alignment */
+    /* margin-bottom: 20px; */
+    position: relative;
+
+    .icon {
+      display: flex;
+      flex-direction: column; /* Stack icon and line vertically */
+      align-items: center;
+      position: relative;
+      margin-right: 15px;
+
+      .step-number {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background-color: #fff;
+        color: #828282;
+        border: 2px solid #d6d6d6;
+        border-radius: 50%;
+        font-weight: bold;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .line {
+        width: 0px;
+        height: 32px;
+        border: 2px dashed rgba(10, 154, 100, 0.32);
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+      flex: 1; /* Make the text take available space */
+    }
+
+    &.last .icon .line {
+      display: none; /* Hide the line for the last step */
+    }
+  }
+}
+
+.finance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  background-color: #00965e;
+  border-radius: 50%;
+  flex-shrink: 0;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  border: 1px solid #d6d6d6;
+  margin: 16px 0;
+}
+
+.text-content h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.text-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.text-content h3 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.p-finance-item {
+  margin-top: 1px;
+}

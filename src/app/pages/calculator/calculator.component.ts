@@ -5,6 +5,7 @@ import * as bootstrap from 'bootstrap';
 import { RateCalculatorComponent } from './components/rate-calculator/rate-calculator.component';
 import { SharedService } from '../../services/shared.service';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-calculator',
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
     StepperComponent,
     RateCalculatorComponent,
     CommonModule,
+    FooterComponent,
   ],
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
