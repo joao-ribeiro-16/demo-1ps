@@ -13,209 +13,211 @@
         1
       </button>
     </h1>
-    <div class="summary-info">
-      <div class="summary-info-item">
-        <p class="label">Finanzierungsbetrag:</p>
-        <p class="value"><strong>500,00 €</strong></p>
-      </div>
-      <div class="summary-info-item">
-        <p class="label">Ihr Kauf bei:</p>
-        <p class="value"><strong>Testhändler</strong></p>
-      </div>
-    </div>
-    <div class="separator"></div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="tabs">
-    <button
-      class="tab"
-      [class.active]="activeTab === 'Laufzeit'"
-      (click)="setActiveTab('Laufzeit')"
-    >
-      Laufzeit
-    </button>
-    <button
-      class="tab"
-      [class.active]="activeTab === 'Wunschraten'"
-      (click)="setActiveTab('Wunschraten')"
-    >
-      Wunschraten
-    </button>
   </div>
 
-  <div class="rate-selection">
-    <div class="title-rate-selection" *ngIf="activeTab === 'Laufzeit'">
-      <h3>Anzahl an Raten</h3>
-    </div>
-    <div class="title-rate-selection" *ngIf="activeTab === 'Wunschraten'">
-      <h3>Monatliche Wunschrate</h3>
-    </div>
-    <div class="rate-buttons">
-      <button
-        class="arrow-btn"
-        (click)="slideLeft()"
-        [disabled]="currentIndex === 0"
-      >
-        <img src="assets/arrow-button.png" alt="arrow-button" />
-      </button>
+  @for (item of availableProducts; track $index) {
+  <app-custom-label
+    [label]="'Finanzierungsbetrag'"
+    [value]="item.creditAmount"
+  ></app-custom-label>
+  <app-custom-label
+    [label]="'Ihr Kauf bei:'"
+    [value]="item.creditAmount"
+  ></app-custom-label>
+  }
 
+  <div class="container">
+    <div class="tabs">
       <button
-        *ngFor="let rate of visibleRates"
-        class="rate-btn"
-        [class.active]="rate === selectedRate"
-        (click)="selectRate(rate)"
+        class="tab"
+        [class.active]="activeTab === 'Laufzeit'"
+        (click)="setActiveTab('Laufzeit')"
       >
-        {{ rate }}
+        Laufzeit
       </button>
-
       <button
-        class="arrow-btn"
-        (click)="slideRight()"
-        [disabled]="currentIndex + maxVisible >= rates.length"
-        style="transform: rotate(180deg)"
+        class="tab"
+        [class.active]="activeTab === 'Wunschraten'"
+        (click)="setActiveTab('Wunschraten')"
       >
-        <img src="assets/arrow-button.png" alt="arrow-button" />
+        Wunschraten
       </button>
     </div>
 
-    <div *ngIf="activeTab === 'Laufzeit'" class="rate-options">
-      <button class="option-btn">Kürzeste Laufzeit</button>
-      <button class="option-btn">0 % mit langer Laufzeit</button>
-      <button class="option-btn">Günstigster Zins</button>
-      <button class="option-btn">Kleinste Rate</button>
-    </div>
-
-    <div *ngIf="activeTab === 'Wunschraten'" class="rate-options">
-      <button class="option-btn">Kürzeste Laufzeit</button>
-      <button class="option-btn">0 % mit langer Laufzeit</button>
-      <button class="option-btn">Günstigster Zins</button>
-    </div>
-  </div>
-</div>
-
-<div class="financing-plan">
-  <h4>Möglicher Finanzierungsplan bei dieser Mindestrate</h4>
-  <div class="plan-details">
-    <div class="detail-row">
-      <span>Monatliche Wunschraten:</span>
-      <p>
-        <strong>18,16 €</strong>
-      </p>
-    </div>
-    <div class="detail-row">
-      <span
-        >Sollzinssatz für diesen Einkauf<br />für 30 Monate (jährl.,
-        gebunden):</span
-      >
-      <strong>6,75 %</strong>
-    </div>
-    <div class="detail-row">
-      <span>Mögliche Sollzinsen für diesen Einkauf:</span>
-      <strong>44,80 €</strong>
-    </div>
-  </div>
-
-  <div>
-    <h3 class="rateneinzug">Rateneinzug</h3>
-    <div class="custom-toggle d-flex align-items-center switch-div">
-      <label
-        class="toggle-label"
-        [class.text-success]="!isFirstSelected"
-        [class.text-secondary]="isFirstSelected"
-      >
-        Zum 1. des Monats
-      </label>
-      <div class="form-check form-switch mx-3">
-        <input
-          class="form-check-input custom-switch"
-          type="checkbox"
-          id="rateToggle"
-          [(ngModel)]="isFirstSelected"
-        />
+    <div class="rate-selection">
+      <div class="title-rate-selection" *ngIf="activeTab === 'Laufzeit'">
+        <h3>Anzahl an Raten</h3>
       </div>
-      <label
-        class="toggle-label"
-        [class.text-success]="isFirstSelected"
-        [class.text-secondary]="!isFirstSelected"
-      >
-        Zum 15. des Monats
-      </label>
-    </div>
-  </div>
-</div>
+      <div class="title-rate-selection" *ngIf="activeTab === 'Wunschraten'">
+        <h3>Monatliche Wunschrate</h3>
+      </div>
+      <div class="rate-buttons">
+        <button
+          class="arrow-btn"
+          (click)="slideLeft()"
+          [disabled]="currentIndex === 0"
+        >
+          <img src="assets/arrow-button.png" alt="arrow-button" />
+        </button>
 
-<div class="container">
-  <div class="online-credit-container">
-    <app-online-credit></app-online-credit>
+        <button
+          *ngFor="let rate of visibleRates"
+          class="rate-btn"
+          [class.active]="rate === selectedRate"
+          (click)="selectRate(rate)"
+        >
+          {{ rate }}
+        </button>
 
-    <div class="card-info">
-      <p>
-        Zu Ihrer Finanzierung erhalten Sie die Consors Finanz Mastercard® –
-        dauerhaft ohne Jahresgebühr. Die Mastercard® erhalten Sie nach Lieferung
-        Ihrer Ware in einem separaten Brief.
-      </p>
-      <div class="card-image">
-        <img src="assets/card-image.png" alt="Card Example" />
+        <button
+          class="arrow-btn"
+          (click)="slideRight()"
+          [disabled]="currentIndex + maxVisible >= rates.length"
+          style="transform: rotate(180deg)"
+        >
+          <img src="assets/arrow-button.png" alt="arrow-button" />
+        </button>
+      </div>
+
+      <div *ngIf="activeTab === 'Laufzeit'" class="rate-options">
+        <button class="option-btn">Kürzeste Laufzeit</button>
+        <button class="option-btn">0 % mit langer Laufzeit</button>
+        <button class="option-btn">Günstigster Zins</button>
+        <button class="option-btn">Kleinste Rate</button>
+      </div>
+
+      <div *ngIf="activeTab === 'Wunschraten'" class="rate-options">
+        <button class="option-btn">Kürzeste Laufzeit</button>
+        <button class="option-btn">0 % mit langer Laufzeit</button>
+        <button class="option-btn">Günstigster Zins</button>
       </div>
     </div>
+  </div>
 
-    <div class="faq-section">
-      <div class="faq-item" (click)="toggleText('section1')">
-        <span [ngClass]="openSections['section1'] ? 'text-open' : 'text-closed'"
-          >Warum erhalte ich diese Karte?
-          <img
-            [src]="
-              openSections['section1']
-                ? 'assets/arrow-up.png'
-                : 'assets/arrow-down.png'
-            "
-            alt="arrow"
-            class="arrow"
-        /></span>
-      </div>
-      <div class="faq-content" *ngIf="openSections['section1']">
+  <div class="financing-plan">
+    <h4>Möglicher Finanzierungsplan bei dieser Mindestrate</h4>
+    <div class="plan-details">
+      <div class="detail-row">
+        <span>Monatliche Wunschraten:</span>
         <p>
-          Sie erhalten die Consors Finanz Mastercard®, weil sie der Schlüssel zu
-          Ihrem Verfügungsrahmen ist. Die Karte ist auf jeden Fall immer mit
-          dabei.
-        </p>
-        <p>
-          <strong>Gut zu wissen:</strong> Sollte die Karte nicht verwendet
-          werden, entstehen garantiert keine weiteren Kosten.
+          <strong>18,16 €</strong>
         </p>
       </div>
+      <div class="detail-row">
+        <span
+          >Sollzinssatz für diesen Einkauf<br />für 30 Monate (jährl.,
+          gebunden):</span
+        >
+        <strong>6,75 %</strong>
+      </div>
+      <div class="detail-row">
+        <span>Mögliche Sollzinsen für diesen Einkauf:</span>
+        <strong>44,80 €</strong>
+      </div>
+    </div>
 
-      <div class="faq-item" (click)="toggleText('section2')">
-        <span [ngClass]="openSections['section2'] ? 'text-open' : 'text-closed'"
-          >Ich habe bereits eine Karte
-          <img
-            [src]="
-              openSections['section2']
-                ? 'assets/arrow-up.png'
-                : 'assets/arrow-down.png'
-            "
-            alt="arrow"
-            class="arrow"
+    <div>
+      <h3 class="rateneinzug">Rateneinzug</h3>
+      <div class="custom-toggle d-flex align-items-center switch-div">
+        <label
+          class="toggle-label"
+          [class.text-success]="!isFirstSelected"
+          [class.text-secondary]="isFirstSelected"
+        >
+          Zum 1. des Monats
+        </label>
+        <div class="form-check form-switch mx-3">
+          <input
+            class="form-check-input custom-switch"
+            type="checkbox"
+            id="rateToggle"
+            [(ngModel)]="isFirstSelected"
           />
-        </span>
-      </div>
-      <div class="faq-content" *ngIf="openSections['section2']">
-        <p>
-          Haben Sie bereits die Consors Finanz Mastercard®? Schön, dass Sie
-          schon Kunde bei uns sind! Geben Sie einfach Ihre gewohnten
-          persönlichen Angaben auf der Folgeseite ein.
-        </p>
-        <p>
-          Unser System wird Sie erkennen. Wir wünschen Ihnen viel Freude bei
-          Ihrem Einkauf!
-        </p>
+        </div>
+        <label
+          class="toggle-label"
+          [class.text-success]="isFirstSelected"
+          [class.text-secondary]="!isFirstSelected"
+        >
+          Zum 15. des Monats
+        </label>
       </div>
     </div>
+  </div>
 
-    <div class="button-container">
-      <button class="btn cta-button">Weiter zur Dateneingabe</button>
+  <div class="container">
+    <div class="online-credit-container">
+      <app-online-credit></app-online-credit>
+
+      <div class="card-info">
+        <p>
+          Zu Ihrer Finanzierung erhalten Sie die Consors Finanz Mastercard® –
+          dauerhaft ohne Jahresgebühr. Die Mastercard® erhalten Sie nach
+          Lieferung Ihrer Ware in einem separaten Brief.
+        </p>
+        <div class="card-image">
+          <img src="assets/card-image.png" alt="Card Example" />
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <div class="faq-item" (click)="toggleText('section1')">
+          <span
+            [ngClass]="openSections['section1'] ? 'text-open' : 'text-closed'"
+            >Warum erhalte ich diese Karte?
+            <img
+              [src]="
+                openSections['section1']
+                  ? 'assets/arrow-up.png'
+                  : 'assets/arrow-down.png'
+              "
+              alt="arrow"
+              class="arrow"
+          /></span>
+        </div>
+        <div class="faq-content" *ngIf="openSections['section1']">
+          <p>
+            Sie erhalten die Consors Finanz Mastercard®, weil sie der Schlüssel
+            zu Ihrem Verfügungsrahmen ist. Die Karte ist auf jeden Fall immer
+            mit dabei.
+          </p>
+          <p>
+            <strong>Gut zu wissen:</strong> Sollte die Karte nicht verwendet
+            werden, entstehen garantiert keine weiteren Kosten.
+          </p>
+        </div>
+
+        <div class="faq-item" (click)="toggleText('section2')">
+          <span
+            [ngClass]="openSections['section2'] ? 'text-open' : 'text-closed'"
+            >Ich habe bereits eine Karte
+            <img
+              [src]="
+                openSections['section2']
+                  ? 'assets/arrow-up.png'
+                  : 'assets/arrow-down.png'
+              "
+              alt="arrow"
+              class="arrow"
+            />
+          </span>
+        </div>
+        <div class="faq-content" *ngIf="openSections['section2']">
+          <p>
+            Haben Sie bereits die Consors Finanz Mastercard®? Schön, dass Sie
+            schon Kunde bei uns sind! Geben Sie einfach Ihre gewohnten
+            persönlichen Angaben auf der Folgeseite ein.
+          </p>
+          <p>
+            Unser System wird Sie erkennen. Wir wünschen Ihnen viel Freude bei
+            Ihrem Einkauf!
+          </p>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="btn cta-button">Weiter zur Dateneingabe</button>
+      </div>
     </div>
   </div>
 </div>

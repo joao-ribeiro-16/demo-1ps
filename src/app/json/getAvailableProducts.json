@@ -1,0 +1,16 @@
+[
+    {
+        "index": 0,
+        "creditAmount": 200,
+        "duration": 6,
+        "monthlyRate": 34.26,
+        "gapDelay": 0,
+        "gapTotalAmount": 0,
+        "gapDuration": 0,
+        "effectiveRate": 9.9,
+        "nominalRate": 9.47,
+        "totalInterestRate": 5.56,
+        "lastInstallment": 0,
+        "totalPayment": 205.56
+      }
+]

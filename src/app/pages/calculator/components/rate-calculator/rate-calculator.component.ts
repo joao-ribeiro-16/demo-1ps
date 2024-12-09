@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../../../../shared/footer/footer.component';
 import { OnlineCreditComponent } from './components/online-credit/online-credit.component';
+import { AvailableProductsService } from '../../../../services/available-products.service';
+import { CustomLabelComponent } from '../../../../shared/custom-label/custom-label.component';
 
 @Component({
   selector: 'app-rate-calculator',
@@ -13,22 +15,32 @@ import { OnlineCreditComponent } from './components/online-credit/online-credit.
     FooterComponent,
     CommonModule,
     OnlineCreditComponent,
+    CustomLabelComponent,
   ],
   templateUrl: './rate-calculator.component.html',
   styleUrl: './rate-calculator.component.css',
 })
-export class RateCalculatorComponent {
+export class RateCalculatorComponent implements OnInit {
   isFirstSelected: boolean = true;
   isTextVisible: boolean = false;
   openSections: { [key: string]: boolean } = {};
-  activeTab: string = 'Laufzeit'; // Default active tab
-  rates: number[] = [12, 16, 20, 24, 28]; // Array of rates
-  visibleRates: number[] = []; // Visible rates in the UI
-  currentIndex: number = 0; // Index for the visible range
-  maxVisible: number = 3; // Maximum number of visible buttons at a time
+  activeTab: string = 'Laufzeit';
+  rates: number[] = [12, 16, 20, 24, 28];
+  visibleRates: number[] = [];
+  currentIndex: number = 0;
+  maxVisible: number = 3;
   selectedRate: number | null = null;
 
-  constructor() {
+  availableProducts: any[] = [];
+
+  ngOnInit(): void {
+    this.availableProductsService.getAvailableProducts().subscribe((res) => {
+      this.availableProducts = res;
+      console.log(this.availableProducts);
+    });
+  }
+
+  constructor(private availableProductsService: AvailableProductsService) {
     this.updateVisibleRates();
   }
 
@@ -40,7 +52,6 @@ export class RateCalculatorComponent {
     this.openSections[section] = !this.openSections[section];
   }
 
-  // Update the visible rates based on the current index
   updateVisibleRates() {
     this.visibleRates = this.rates.slice(
       this.currentIndex,
@@ -48,7 +59,6 @@ export class RateCalculatorComponent {
     );
   }
 
-  // Slide left
   slideLeft() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
@@ -56,7 +66,6 @@ export class RateCalculatorComponent {
     }
   }
 
-  // Slide right
   slideRight() {
     if (this.currentIndex + this.maxVisible < this.rates.length) {
       this.currentIndex++;

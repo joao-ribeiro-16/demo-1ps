@@ -3,7 +3,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SharedService } from '../../services/shared.service';
 import { HeaderDropdownComponent } from './components/header-dropdown/header-dropdown.component';
-import { CancelModalComponent } from '../../pages/calculator/components/rate-calculator/components/cancel-modal/cancel-modal.component';
+import { CancelModalComponent } from '../cancel-modal/cancel-modal.component';
 
 @Component({
   selector: 'app-header',
