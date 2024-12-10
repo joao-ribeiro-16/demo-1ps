@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('bnp_fonts.css');
+
+html, body {
+  font-family: "BNPPSans" !important;
+}

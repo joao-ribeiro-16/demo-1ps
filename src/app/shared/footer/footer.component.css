@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-family: Arial, sans-serif;
   padding: 16px;
 }
 
@@ -16,14 +15,12 @@
   color: #007548;
   font-size: 16px;
   line-height: 2;
-  font-weight: 500;
   cursor: pointer;
-
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-
   min-height: 48px;
 }
 
@@ -39,11 +36,13 @@
   align-items: flex-end;
   gap: 10px;
   text-align: right;
+  font-weight: 300;
 }
 
 .phone-info .phone-number {
   text-align: right;
   color: #007548;
+  font-weight: 400;
 }
 
 .phone-info p {
