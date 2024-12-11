@@ -31,7 +31,6 @@
 }
 
 .details-label {
-  font-family: "BNPP Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -46,7 +45,6 @@
 }
 
 .details-value-ihr-kauf {
-  font-family: "BNPP Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -57,7 +55,6 @@
 }
 
 .title {
-  font-family: "BNPP Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -67,7 +64,6 @@
 }
 
 .title-finanz {
-  font-family: "BNPP Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -86,7 +82,6 @@
 }
 
 .details-value-finanz {
-  font-family: "BNPP Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;

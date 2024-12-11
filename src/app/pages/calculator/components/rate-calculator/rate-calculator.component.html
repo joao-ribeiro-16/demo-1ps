@@ -44,7 +44,7 @@
       </button>
     </div>
 
-    <div class="rate-selection">
+    <div class="rate-container">
       <div class="title-rate-selection" *ngIf="activeTab === 'Laufzeit'">
         <h3>Anzahl an Raten</h3>
       </div>
@@ -52,30 +52,18 @@
         <h3>Monatliche Wunschrate</h3>
       </div>
       <div class="rate-buttons">
-        <button
-          class="arrow-btn"
-          (click)="slideLeft()"
-          [disabled]="currentIndex === 0"
-        >
+        <button class="arrow-btn"
+        (click)="prev()" [class.disable]="selectedIndex === 0" [disabled]="selectedIndex === 0">
           <img src="assets/arrow-button.png" alt="arrow-button" />
         </button>
-
-        <button
-          *ngFor="let rate of visibleRates"
-          class="rate-btn"
-          [class.active]="rate === selectedRate"
-          (click)="selectRate(rate)"
-        >
+        <button class="rate rate-btn" 
+            *ngFor="let rate of visibleRates; let i = index"
+            [class.active]="isSelected(i)"
+            (click)="selectRate(i)">
           {{ rate }}
         </button>
-
-        <button
-          class="arrow-btn"
-          (click)="slideRight()"
-          [disabled]="currentIndex + maxVisible >= rates.length"
-          style="transform: rotate(180deg)"
-        >
-          <img src="assets/arrow-button.png" alt="arrow-button" />
+        <button class="arrow-btn" [class.disable]="selectedIndex === rates.length - 1" (click)="next()" [disabled]="selectedIndex === rates.length - 1">
+          <img src="assets/arrow-button.png" style="transform: rotate(180deg);" alt="arrow-button" />
         </button>
       </div>
 
