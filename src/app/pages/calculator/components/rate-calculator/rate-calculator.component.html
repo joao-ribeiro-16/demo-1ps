@@ -60,8 +60,8 @@
             *ngFor="let rate of visibleRates; let i = index"
             [class.active]="isSelected(i)"
             (click)="selectRate(i)">
-          {{ rate }}
-        </button>
+            {{ showInMonths ? rate.months : rate.euros + ' €' }}
+          </button>
         <button class="arrow-btn" [class.disable]="selectedIndex === rates.length - 1" (click)="next()" [disabled]="selectedIndex === rates.length - 1">
           <img src="assets/arrow-button.png" style="transform: rotate(180deg);" alt="arrow-button" />
         </button>
